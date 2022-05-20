@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  houses_api_service:
+      build: ./service_of_houses
+      ports:
+          - 8000:8000
+      volumes:
+          - ./service_of_houses:/src
+      container_name: houses_api_service
