@@ -29,3 +29,25 @@ Dudas iniciales:
     DUDA: 3
     aun no tengo idea de como crear el modelo para el 2 microservicio :( pero
     ya veremos luego :)
+
+
+
+RESPUESTAS DUDAS:
+
+
+    RESPUESTA DUDA 1 y2:
+    en primera instancia opte por no realizar procedimiento almacenado ya que esto agrega
+    otra capa en la base de datos que debe ser administrada , por lo que he realizado el respectivo QUERIE SQL que valida los datos de acuerdo a los requerimientos de la prueba es decir , que solo traiga los estados pre_venta, en_venta, vendido que no contengan valores nulos o vacios y que las propiedades tengan un status_id ya que existen registros de propiedades en la tabla property que no tienen relacion con la tabla status_history por lo que esas no serian propiedades validas , todas estas validaciones las realiza el querie y una vez ejecutada con estos datos limpios de retorno , los administro desde python.
+    
+    una vez teniendo los  datos limpios en python opte por usar la libreria pandas  para convertir estos datos en un dataframe y filtrarlos dependiendo de los requisitos del usuario  , los cuales llegan a traves del metodo POST en la API, lo cual es mejor que 
+    modificar el QUERIE SQL dependiendo de los filtros ya que el dataframe es mas eficiente.
+
+
+    RESPUESTA DUDA 3:
+    para el 2 microservicio debo crear 2 tablas adicionales para romper la relacion que existe
+    entre usuario - propiedades en cuanto a dar likes , ya que 1 usuario puede tener muchas propiedades con like pero 1 propiedad solo puede tener 1 like por usuario unico
+    es decir que un usuario no puede dar "Like" a una misma propiedad 2 veces ya que eso seria
+    "Unlike"   y de esta forma he diseñado el diagrama
+
+    COMENTARIO ADICIONAL:
+    opte por utilizar FastAPI ya que es mucho mas comodo en cuanto al manejo de errores,conexiones  y pruebas unitarias con pytest que utilizar la clase simpleHTTP.server de python para crear la API :)
