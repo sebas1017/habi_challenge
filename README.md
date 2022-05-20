@@ -96,7 +96,8 @@ http://localhost:8000/docs
 
 
 para ejecutar los tests del proyecto ejecutar el comando
-    docker-compose run houses_api_service pytest tests
+   
+   # docker-compose run houses_api_service pytest tests
 
 si desea ejecutar el proyecto sin docker-compose solo desplazarse hasta la ruta
 /service_of_houses   y crear un entorno virtual en ella con el siguiente comando
