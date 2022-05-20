@@ -123,7 +123,8 @@ la documentacion acerca de como usar la API se encuentra en el directorio
 
 # Despliegue en heroku
     - debes tener una cuenta en heroku creada con anterioridad y tener el Cliente de heroku
-    instalado para ejecutar comandos de heroku
+    instalado para ejecutar comandos de heroku, y moverse a la ruta service_of_houses
+    y al nivel del Dockerfile ejecutar los siguientes comandos
 
     heroku login
     heroku container:login
