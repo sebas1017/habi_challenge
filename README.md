@@ -2,7 +2,7 @@
 
 API houses :)
 
-
+url =  https://habi-challenge-houses.herokuapp.com/docs
 
 ![alt text](https://github.com/sebas1017/habi_challenge/blob/main/demo_image/fastapi.png?raw=true)
 
